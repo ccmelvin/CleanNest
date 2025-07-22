@@ -1,241 +1,258 @@
-<testsuites id="" name="" tests="28" failures="1" skipped="0" errors="0" time="38.328822">
-<testsuite name="visual.spec.ts" timestamp="2025-07-22T17:52:12.227Z" hostname="chromium" tests="7" failures="0" skipped="0" time="47.667" errors="0">
-<testcase name="CleanNest - Visual Regression Tests › should match homepage visual snapshot" classname="visual.spec.ts" time="6.526">
+<testsuites id="" name="" tests="24" failures="4" skipped="0" errors="0" time="28.100193">
+<testsuite name="shopping.spec.ts" timestamp="2025-07-22T18:04:15.963Z" hostname="chromium" tests="6" failures="1" skipped="0" time="24.704" errors="0">
+<testcase name="CleanNest - Shopping List › should display shopping section" classname="shopping.spec.ts" time="3.331">
 </testcase>
-<testcase name="CleanNest - Visual Regression Tests › should match mobile homepage visual snapshot" classname="visual.spec.ts" time="6.021">
-</testcase>
-<testcase name="CleanNest - Visual Regression Tests › should match tablet view visual snapshot" classname="visual.spec.ts" time="6.445">
-</testcase>
-<testcase name="CleanNest - Visual Regression Tests › should match tasks section visual snapshot" classname="visual.spec.ts" time="7.792">
+<testcase name="CleanNest - Shopping List › should allow adding shopping items" classname="shopping.spec.ts" time="8.365">
 <system-out>
-<![CDATA[A snapshot doesn't exist at /Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/tasks-section-chromium-darwin.png, writing actual.
-
-[[ATTACHMENT|../tests/visual.spec.ts-snapshots/tasks-section-chromium-darwin.png]]
-
-[[ATTACHMENT|visual-CleanNest---Visual--e8f6e-sks-section-visual-snapshot-chromium/tasks-section-actual.png]]
+<![CDATA[ℹ️  Shopping item addition test completed with interaction attempts
 ]]>
 </system-out>
 </testcase>
-<testcase name="CleanNest - Visual Regression Tests › should match shopping section visual snapshot" classname="visual.spec.ts" time="7.387">
-<system-out>
-<![CDATA[A snapshot doesn't exist at /Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/shopping-section-chromium-darwin.png, writing actual.
+<testcase name="CleanNest - Shopping List › should handle product brands and quantities" classname="shopping.spec.ts" time="3.117">
+<failure message="shopping.spec.ts:57:7 should handle product brands and quantities" type="FAILURE">
+<![CDATA[  [chromium] › shopping.spec.ts:57:7 › CleanNest - Shopping List › should handle product brands and quantities 
 
-[[ATTACHMENT|../tests/visual.spec.ts-snapshots/shopping-section-chromium-darwin.png]]
+    Error: locator.count: Unexpected token "=" while parsing css selector "input[name*="brand"], [data-testid*="brand"], text=brand". Did you mean to CSS.escape it?
 
-[[ATTACHMENT|visual-CleanNest---Visual--27113-ing-section-visual-snapshot-chromium/shopping-section-actual.png]]
-]]>
-</system-out>
-</testcase>
-<testcase name="CleanNest - Visual Regression Tests › should handle dark mode if available" classname="visual.spec.ts" time="4.913">
-<system-out>
-<![CDATA[ℹ️  No dark mode toggle found
-]]>
-</system-out>
-</testcase>
-<testcase name="CleanNest - Visual Regression Tests › should capture component states" classname="visual.spec.ts" time="8.583">
-<system-out>
-<![CDATA[/Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/button-hover-state-chromium-darwin.png is re-generated, writing actual.
-]]>
-</system-out>
-</testcase>
-</testsuite>
-<testsuite name="visual.spec.ts" timestamp="2025-07-22T17:52:12.227Z" hostname="firefox" tests="7" failures="1" skipped="0" time="59.534" errors="0">
-<testcase name="CleanNest - Visual Regression Tests › should match homepage visual snapshot" classname="visual.spec.ts" time="8.305">
-</testcase>
-<testcase name="CleanNest - Visual Regression Tests › should match mobile homepage visual snapshot" classname="visual.spec.ts" time="4.942">
-<system-out>
-<![CDATA[/Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/homepage-mobile-firefox-darwin.png is re-generated, writing actual.
-]]>
-</system-out>
-</testcase>
-<testcase name="CleanNest - Visual Regression Tests › should match tablet view visual snapshot" classname="visual.spec.ts" time="10.823">
-</testcase>
-<testcase name="CleanNest - Visual Regression Tests › should match tasks section visual snapshot" classname="visual.spec.ts" time="7.057">
-<system-out>
-<![CDATA[A snapshot doesn't exist at /Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/tasks-section-firefox-darwin.png, writing actual.
+      62 |     const quantityElements = page.locator('input[name*="quantity"], [data-testid*="quantity"], input[type="number"]');
+      63 |     
+    > 64 |     const hasBrandElements = await brandElements.count() > 0;
+         |                                                  ^
+      65 |     const hasQuantityElements = await quantityElements.count() > 0;
+      66 |     
+      67 |     if (hasBrandElements) {
+        at /Users/cassiamelvin/Downloads/cleaning-nest/tests/shopping.spec.ts:64:50
 
-[[ATTACHMENT|../tests/visual.spec.ts-snapshots/tasks-section-firefox-darwin.png]]
-
-[[ATTACHMENT|visual-CleanNest---Visual--e8f6e-sks-section-visual-snapshot-firefox/tasks-section-actual.png]]
-]]>
-</system-out>
-</testcase>
-<testcase name="CleanNest - Visual Regression Tests › should match shopping section visual snapshot" classname="visual.spec.ts" time="10.104">
-<failure message="visual.spec.ts:67:7 should match shopping section visual snapshot" type="FAILURE">
-<![CDATA[  [firefox] › visual.spec.ts:67:7 › CleanNest - Visual Regression Tests › should match shopping section visual snapshot 
-
-    Error: Timed out 5000ms waiting for expect(page).toHaveScreenshot(expected)
-
-      Failed to take two consecutive stable screenshots.
-
-      Snapshot: shopping-section.png
-
-    Call log:
-      - Expect "toHaveScreenshot(shopping-section.png)" with timeout 5000ms
-        - generating new stable screenshot expectation
-      - taking page screenshot
-        - disabled all CSS animations
-      - waiting for fonts to load...
-      - fonts loaded
-      - waiting 100ms before taking screenshot
-      - taking page screenshot
-        - disabled all CSS animations
-      - waiting for fonts to load...
-      - fonts loaded
-      - 35 pixels (ratio 0.01 of all image pixels) are different.
-      - waiting 250ms before taking screenshot
-      - taking page screenshot
-        - disabled all CSS animations
-      - waiting for fonts to load...
-      - fonts loaded
-      - 35 pixels (ratio 0.01 of all image pixels) are different.
-      - waiting 500ms before taking screenshot
-      2 × taking page screenshot
-          - disabled all CSS animations
-        - waiting for fonts to load...
-        - fonts loaded
-        - 35 pixels (ratio 0.01 of all image pixels) are different.
-        - waiting 1000ms before taking screenshot
-      - Timeout 5000ms exceeded.
-
-
-      77 |     }
-      78 |     
-    > 79 |     await expect(page).toHaveScreenshot('shopping-section.png', {
-         |                        ^
-      80 |       fullPage: true,
-      81 |       animations: 'disabled'
-      82 |     });
-        at /Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts:79:24
-
-    attachment #1: shopping-section (image/png) ────────────────────────────────────────────────────
-    Received: ../test-results/visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/shopping-section-actual.png
-    Previous: ../test-results/visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/shopping-section-previous.png
-    Diff:     ../test-results/visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/shopping-section-diff.png
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-chromium/test-failed-1.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ../test-results/visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/test-failed-1.png
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-chromium/video.webm
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
-    ../test-results/visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ../test-results/visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/error-context.md
+    Error Context: ../test-results/shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-chromium/error-context.md
 ]]>
 </failure>
 <system-out>
 <![CDATA[
-[[ATTACHMENT|visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/shopping-section-previous.png]]
+[[ATTACHMENT|shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-chromium/test-failed-1.png]]
 
-[[ATTACHMENT|visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/shopping-section-actual.png]]
+[[ATTACHMENT|shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-chromium/video.webm]]
 
-[[ATTACHMENT|visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/shopping-section-diff.png]]
-
-[[ATTACHMENT|visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/test-failed-1.png]]
-
-[[ATTACHMENT|visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/video.webm]]
-
-[[ATTACHMENT|visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/error-context.md]]
+[[ATTACHMENT|shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-chromium/error-context.md]]
 ]]>
 </system-out>
 </testcase>
-<testcase name="CleanNest - Visual Regression Tests › should handle dark mode if available" classname="visual.spec.ts" time="3.785">
+<testcase name="CleanNest - Shopping List › should show purchase completion functionality" classname="shopping.spec.ts" time="3.301">
 <system-out>
-<![CDATA[ℹ️  No dark mode toggle found
+<![CDATA[ℹ️  No purchase elements found with current selectors
 ]]>
 </system-out>
 </testcase>
-<testcase name="CleanNest - Visual Regression Tests › should capture component states" classname="visual.spec.ts" time="14.518">
+<testcase name="CleanNest - Shopping List › should handle empty shopping list state" classname="shopping.spec.ts" time="3.251">
+<system-out>
+<![CDATA[ℹ️  Shopping list state unclear with current selectors
+]]>
+</system-out>
+</testcase>
+<testcase name="CleanNest - Shopping List › should allow editing shopping items" classname="shopping.spec.ts" time="3.339">
+<system-out>
+<![CDATA[ℹ️  No edit elements found with current selectors
+]]>
+</system-out>
 </testcase>
 </testsuite>
-<testsuite name="visual.spec.ts" timestamp="2025-07-22T17:52:12.227Z" hostname="webkit" tests="7" failures="0" skipped="0" time="49.943" errors="0">
-<testcase name="CleanNest - Visual Regression Tests › should match homepage visual snapshot" classname="visual.spec.ts" time="11.647">
+<testsuite name="shopping.spec.ts" timestamp="2025-07-22T18:04:15.963Z" hostname="firefox" tests="6" failures="1" skipped="0" time="40.739" errors="0">
+<testcase name="CleanNest - Shopping List › should display shopping section" classname="shopping.spec.ts" time="4.717">
+</testcase>
+<testcase name="CleanNest - Shopping List › should allow adding shopping items" classname="shopping.spec.ts" time="10.979">
 <system-out>
-<![CDATA[/Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/homepage-full-webkit-darwin.png is re-generated, writing actual.
+<![CDATA[ℹ️  Shopping item addition test completed with interaction attempts
 ]]>
 </system-out>
 </testcase>
-<testcase name="CleanNest - Visual Regression Tests › should match mobile homepage visual snapshot" classname="visual.spec.ts" time="3.989">
-<system-out>
-<![CDATA[/Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/homepage-mobile-webkit-darwin.png is re-generated, writing actual.
-]]>
-</system-out>
-</testcase>
-<testcase name="CleanNest - Visual Regression Tests › should match tablet view visual snapshot" classname="visual.spec.ts" time="6.782">
-<system-out>
-<![CDATA[/Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/homepage-tablet-webkit-darwin.png is re-generated, writing actual.
-]]>
-</system-out>
-</testcase>
-<testcase name="CleanNest - Visual Regression Tests › should match tasks section visual snapshot" classname="visual.spec.ts" time="5.575">
-<system-out>
-<![CDATA[A snapshot doesn't exist at /Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/tasks-section-webkit-darwin.png, writing actual.
+<testcase name="CleanNest - Shopping List › should handle product brands and quantities" classname="shopping.spec.ts" time="7.065">
+<failure message="shopping.spec.ts:57:7 should handle product brands and quantities" type="FAILURE">
+<![CDATA[  [firefox] › shopping.spec.ts:57:7 › CleanNest - Shopping List › should handle product brands and quantities 
 
-[[ATTACHMENT|../tests/visual.spec.ts-snapshots/tasks-section-webkit-darwin.png]]
+    Error: locator.count: Unexpected token "=" while parsing css selector "input[name*="brand"], [data-testid*="brand"], text=brand". Did you mean to CSS.escape it?
 
-[[ATTACHMENT|visual-CleanNest---Visual--e8f6e-sks-section-visual-snapshot-webkit/tasks-section-actual.png]]
+      62 |     const quantityElements = page.locator('input[name*="quantity"], [data-testid*="quantity"], input[type="number"]');
+      63 |     
+    > 64 |     const hasBrandElements = await brandElements.count() > 0;
+         |                                                  ^
+      65 |     const hasQuantityElements = await quantityElements.count() > 0;
+      66 |     
+      67 |     if (hasBrandElements) {
+        at /Users/cassiamelvin/Downloads/cleaning-nest/tests/shopping.spec.ts:64:50
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-firefox/error-context.md
 ]]>
-</system-out>
-</testcase>
-<testcase name="CleanNest - Visual Regression Tests › should match shopping section visual snapshot" classname="visual.spec.ts" time="6.184">
+</failure>
 <system-out>
-<![CDATA[A snapshot doesn't exist at /Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/shopping-section-webkit-darwin.png, writing actual.
+<![CDATA[
+[[ATTACHMENT|shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-firefox/test-failed-1.png]]
 
-[[ATTACHMENT|../tests/visual.spec.ts-snapshots/shopping-section-webkit-darwin.png]]
+[[ATTACHMENT|shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-firefox/video.webm]]
 
-[[ATTACHMENT|visual-CleanNest---Visual--27113-ing-section-visual-snapshot-webkit/shopping-section-actual.png]]
+[[ATTACHMENT|shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-firefox/error-context.md]]
 ]]>
 </system-out>
 </testcase>
-<testcase name="CleanNest - Visual Regression Tests › should handle dark mode if available" classname="visual.spec.ts" time="3.784">
+<testcase name="CleanNest - Shopping List › should show purchase completion functionality" classname="shopping.spec.ts" time="5.216">
 <system-out>
-<![CDATA[ℹ️  No dark mode toggle found
+<![CDATA[ℹ️  No purchase elements found with current selectors
 ]]>
 </system-out>
 </testcase>
-<testcase name="CleanNest - Visual Regression Tests › should capture component states" classname="visual.spec.ts" time="11.982">
+<testcase name="CleanNest - Shopping List › should handle empty shopping list state" classname="shopping.spec.ts" time="6.459">
+<system-out>
+<![CDATA[ℹ️  Shopping list state unclear with current selectors
+]]>
+</system-out>
+</testcase>
+<testcase name="CleanNest - Shopping List › should allow editing shopping items" classname="shopping.spec.ts" time="6.303">
+<system-out>
+<![CDATA[ℹ️  No edit elements found with current selectors
+]]>
+</system-out>
 </testcase>
 </testsuite>
-<testsuite name="visual.spec.ts" timestamp="2025-07-22T17:52:12.227Z" hostname="Mobile Chrome" tests="7" failures="0" skipped="0" time="24.775" errors="0">
-<testcase name="CleanNest - Visual Regression Tests › should match homepage visual snapshot" classname="visual.spec.ts" time="4.037">
+<testsuite name="shopping.spec.ts" timestamp="2025-07-22T18:04:15.963Z" hostname="webkit" tests="6" failures="1" skipped="0" time="30.37" errors="0">
+<testcase name="CleanNest - Shopping List › should display shopping section" classname="shopping.spec.ts" time="2.899">
 </testcase>
-<testcase name="CleanNest - Visual Regression Tests › should match mobile homepage visual snapshot" classname="visual.spec.ts" time="4.013">
-</testcase>
-<testcase name="CleanNest - Visual Regression Tests › should match tablet view visual snapshot" classname="visual.spec.ts" time="4.631">
+<testcase name="CleanNest - Shopping List › should allow adding shopping items" classname="shopping.spec.ts" time="8.514">
 <system-out>
-<![CDATA[/Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/homepage-tablet-Mobile-Chrome-darwin.png is re-generated, writing actual.
+<![CDATA[ℹ️  Shopping item addition test completed with interaction attempts
 ]]>
 </system-out>
 </testcase>
-<testcase name="CleanNest - Visual Regression Tests › should match tasks section visual snapshot" classname="visual.spec.ts" time="2.145">
+<testcase name="CleanNest - Shopping List › should handle product brands and quantities" classname="shopping.spec.ts" time="5.345">
+<failure message="shopping.spec.ts:57:7 should handle product brands and quantities" type="FAILURE">
+<![CDATA[  [webkit] › shopping.spec.ts:57:7 › CleanNest - Shopping List › should handle product brands and quantities 
+
+    Error: locator.count: Unexpected token "=" while parsing css selector "input[name*="brand"], [data-testid*="brand"], text=brand". Did you mean to CSS.escape it?
+
+      62 |     const quantityElements = page.locator('input[name*="quantity"], [data-testid*="quantity"], input[type="number"]');
+      63 |     
+    > 64 |     const hasBrandElements = await brandElements.count() > 0;
+         |                                                  ^
+      65 |     const hasQuantityElements = await quantityElements.count() > 0;
+      66 |     
+      67 |     if (hasBrandElements) {
+        at /Users/cassiamelvin/Downloads/cleaning-nest/tests/shopping.spec.ts:64:50
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-webkit/error-context.md
+]]>
+</failure>
 <system-out>
-<![CDATA[A snapshot doesn't exist at /Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/tasks-section-Mobile-Chrome-darwin.png, writing actual.
+<![CDATA[
+[[ATTACHMENT|shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-webkit/test-failed-1.png]]
 
-[[ATTACHMENT|../tests/visual.spec.ts-snapshots/tasks-section-Mobile-Chrome-darwin.png]]
+[[ATTACHMENT|shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-webkit/video.webm]]
 
-[[ATTACHMENT|visual-CleanNest---Visual--e8f6e-sks-section-visual-snapshot-Mobile-Chrome/tasks-section-actual.png]]
+[[ATTACHMENT|shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-webkit/error-context.md]]
 ]]>
 </system-out>
 </testcase>
-<testcase name="CleanNest - Visual Regression Tests › should match shopping section visual snapshot" classname="visual.spec.ts" time="4.702">
+<testcase name="CleanNest - Shopping List › should show purchase completion functionality" classname="shopping.spec.ts" time="3.856">
 <system-out>
-<![CDATA[A snapshot doesn't exist at /Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/shopping-section-Mobile-Chrome-darwin.png, writing actual.
-
-[[ATTACHMENT|../tests/visual.spec.ts-snapshots/shopping-section-Mobile-Chrome-darwin.png]]
-
-[[ATTACHMENT|visual-CleanNest---Visual--27113-ing-section-visual-snapshot-Mobile-Chrome/shopping-section-actual.png]]
+<![CDATA[ℹ️  No purchase elements found with current selectors
 ]]>
 </system-out>
 </testcase>
-<testcase name="CleanNest - Visual Regression Tests › should handle dark mode if available" classname="visual.spec.ts" time="2.169">
+<testcase name="CleanNest - Shopping List › should handle empty shopping list state" classname="shopping.spec.ts" time="4.786">
 <system-out>
-<![CDATA[ℹ️  No dark mode toggle found
+<![CDATA[ℹ️  Shopping list state unclear with current selectors
 ]]>
 </system-out>
 </testcase>
-<testcase name="CleanNest - Visual Regression Tests › should capture component states" classname="visual.spec.ts" time="3.078">
+<testcase name="CleanNest - Shopping List › should allow editing shopping items" classname="shopping.spec.ts" time="4.97">
+<system-out>
+<![CDATA[ℹ️  No edit elements found with current selectors
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="shopping.spec.ts" timestamp="2025-07-22T18:04:15.963Z" hostname="Mobile Chrome" tests="6" failures="1" skipped="0" time="21.38" errors="0">
+<testcase name="CleanNest - Shopping List › should display shopping section" classname="shopping.spec.ts" time="3.522">
+</testcase>
+<testcase name="CleanNest - Shopping List › should allow adding shopping items" classname="shopping.spec.ts" time="7.885">
+<system-out>
+<![CDATA[ℹ️  Shopping item addition test completed with interaction attempts
+]]>
+</system-out>
+</testcase>
+<testcase name="CleanNest - Shopping List › should handle product brands and quantities" classname="shopping.spec.ts" time="3.064">
+<failure message="shopping.spec.ts:57:7 should handle product brands and quantities" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › shopping.spec.ts:57:7 › CleanNest - Shopping List › should handle product brands and quantities 
+
+    Error: locator.count: Unexpected token "=" while parsing css selector "input[name*="brand"], [data-testid*="brand"], text=brand". Did you mean to CSS.escape it?
+
+      62 |     const quantityElements = page.locator('input[name*="quantity"], [data-testid*="quantity"], input[type="number"]');
+      63 |     
+    > 64 |     const hasBrandElements = await brandElements.count() > 0;
+         |                                                  ^
+      65 |     const hasQuantityElements = await quantityElements.count() > 0;
+      66 |     
+      67 |     if (hasBrandElements) {
+        at /Users/cassiamelvin/Downloads/cleaning-nest/tests/shopping.spec.ts:64:50
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-Mobile-Chrome/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-Mobile-Chrome/test-failed-1.png]]
+
+[[ATTACHMENT|shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-Mobile-Chrome/video.webm]]
+
+[[ATTACHMENT|shopping-CleanNest---Shopp-5cf31-oduct-brands-and-quantities-Mobile-Chrome/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="CleanNest - Shopping List › should show purchase completion functionality" classname="shopping.spec.ts" time="3.456">
+<system-out>
+<![CDATA[ℹ️  No purchase elements found with current selectors
+]]>
+</system-out>
+</testcase>
+<testcase name="CleanNest - Shopping List › should handle empty shopping list state" classname="shopping.spec.ts" time="1.97">
+<system-out>
+<![CDATA[ℹ️  Shopping list state unclear with current selectors
+]]>
+</system-out>
+</testcase>
+<testcase name="CleanNest - Shopping List › should allow editing shopping items" classname="shopping.spec.ts" time="1.483">
+<system-out>
+<![CDATA[ℹ️  No edit elements found with current selectors
+]]>
+</system-out>
 </testcase>
 </testsuite>
 </testsuites>
