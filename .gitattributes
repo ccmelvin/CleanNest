@@ -1,0 +1,29 @@
+# Correctly identify project languages for GitHub statistics
+
+# TypeScript
+*.ts linguist-language=TypeScript
+*.tsx linguist-language=TypeScript
+
+# Next.js specific
+next.config.* linguist-language=TypeScript
+
+# Tailwind
+*.css linguist-language=CSS
+tailwind.config.* linguist-language=JavaScript
+
+# Docker
+Dockerfile* linguist-language=Dockerfile
+docker-compose.yml linguist-language=YAML
+
+# Playwright
+*.spec.ts linguist-language=TypeScript
+playwright.config.ts linguist-language=TypeScript
+
+# Generated files (don't count in language stats)
+.next/** linguist-generated=true
+node_modules/** linguist-generated=true
+test-results/** linguist-generated=true
+playwright-report/** linguist-generated=true
+
+# Documentation
+*.md linguist-documentation=true
