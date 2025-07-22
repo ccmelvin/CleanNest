@@ -5,15 +5,13 @@ WORKDIR /app
 # Copy package files
 COPY package.json package-lock.json ./
 
-# Update Alpine packages and install dependencies with security fixes
+# Update Alpine packages and install dependencies
 RUN apk update && apk upgrade && \
     apk add --no-cache dumb-init && \
-    npm ci && \
-    npm audit fix --force && \
-    npm ls ip && npm ls @eslint/plugin-kit && \
-    echo '{"dependencies":{"ip":"2.0.1"}}' > /tmp/package.json && \
-    cd /tmp && npm i && cd /app && \
-    cp -f /tmp/node_modules/ip/* /app/node_modules/ip/
+    npm ci
+
+# Add resolution for ip package vulnerability
+RUN npm install ip@2.0.1 --save-exact
 
 # Don't copy the code - we'll use volumes instead
 
