@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  # Production service
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      # Uncomment and set these when connecting to Supabase
+      # - NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+      # - NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+      
+  # Development service with hot-reload
+  dev:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      # Uncomment and set these when connecting to Supabase
+      # - NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+      # - NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
