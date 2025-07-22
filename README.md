@@ -29,6 +29,7 @@ CleanNest is a household management application built with Next.js that helps yo
 - **Icons**: Lucide React
 - **Date Handling**: date-fns
 - **Backend**: Supabase (Auth, Database)
+- **Testing**: Playwright
 
 ## Getting Started
 
@@ -136,6 +137,42 @@ For other deployment options, refer to the [Next.js deployment documentation](ht
 ## Backend Setup
 
 For production use, you'll need to set up a Supabase backend. Detailed instructions can be found in the [SETUP.md](./SETUP.md) file.
+
+## Testing
+
+The project uses Playwright for end-to-end testing. Playwright allows you to test your application in multiple browsers (Chromium, Firefox, and WebKit) with a single API.
+
+### Setting Up Playwright
+
+```bash
+# Install Playwright and its browsers
+./setup-playwright.sh
+
+# Or manually with these commands:
+npm install @playwright/test --save-dev
+npx playwright install
+```
+
+### Running Tests
+
+```bash
+# Run all tests
+npm run test
+
+# Run tests with UI mode
+npm run test:ui
+
+# Run tests in debug mode
+npm run test:debug
+```
+
+### Test Structure
+
+Tests are located in the `tests` directory. Currently, there's a simple example test to demonstrate Playwright functionality.
+
+### Writing Tests
+
+To add new tests, create a new file in the `tests` directory following the naming convention `feature-name.spec.ts`.
 
 ## Contributing
 

@@ -1,0 +1,241 @@
+<testsuites id="" name="" tests="28" failures="1" skipped="0" errors="0" time="38.328822">
+<testsuite name="visual.spec.ts" timestamp="2025-07-22T17:52:12.227Z" hostname="chromium" tests="7" failures="0" skipped="0" time="47.667" errors="0">
+<testcase name="CleanNest - Visual Regression Tests › should match homepage visual snapshot" classname="visual.spec.ts" time="6.526">
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should match mobile homepage visual snapshot" classname="visual.spec.ts" time="6.021">
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should match tablet view visual snapshot" classname="visual.spec.ts" time="6.445">
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should match tasks section visual snapshot" classname="visual.spec.ts" time="7.792">
+<system-out>
+<![CDATA[A snapshot doesn't exist at /Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/tasks-section-chromium-darwin.png, writing actual.
+
+[[ATTACHMENT|../tests/visual.spec.ts-snapshots/tasks-section-chromium-darwin.png]]
+
+[[ATTACHMENT|visual-CleanNest---Visual--e8f6e-sks-section-visual-snapshot-chromium/tasks-section-actual.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should match shopping section visual snapshot" classname="visual.spec.ts" time="7.387">
+<system-out>
+<![CDATA[A snapshot doesn't exist at /Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/shopping-section-chromium-darwin.png, writing actual.
+
+[[ATTACHMENT|../tests/visual.spec.ts-snapshots/shopping-section-chromium-darwin.png]]
+
+[[ATTACHMENT|visual-CleanNest---Visual--27113-ing-section-visual-snapshot-chromium/shopping-section-actual.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should handle dark mode if available" classname="visual.spec.ts" time="4.913">
+<system-out>
+<![CDATA[ℹ️  No dark mode toggle found
+]]>
+</system-out>
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should capture component states" classname="visual.spec.ts" time="8.583">
+<system-out>
+<![CDATA[/Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/button-hover-state-chromium-darwin.png is re-generated, writing actual.
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="visual.spec.ts" timestamp="2025-07-22T17:52:12.227Z" hostname="firefox" tests="7" failures="1" skipped="0" time="59.534" errors="0">
+<testcase name="CleanNest - Visual Regression Tests › should match homepage visual snapshot" classname="visual.spec.ts" time="8.305">
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should match mobile homepage visual snapshot" classname="visual.spec.ts" time="4.942">
+<system-out>
+<![CDATA[/Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/homepage-mobile-firefox-darwin.png is re-generated, writing actual.
+]]>
+</system-out>
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should match tablet view visual snapshot" classname="visual.spec.ts" time="10.823">
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should match tasks section visual snapshot" classname="visual.spec.ts" time="7.057">
+<system-out>
+<![CDATA[A snapshot doesn't exist at /Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/tasks-section-firefox-darwin.png, writing actual.
+
+[[ATTACHMENT|../tests/visual.spec.ts-snapshots/tasks-section-firefox-darwin.png]]
+
+[[ATTACHMENT|visual-CleanNest---Visual--e8f6e-sks-section-visual-snapshot-firefox/tasks-section-actual.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should match shopping section visual snapshot" classname="visual.spec.ts" time="10.104">
+<failure message="visual.spec.ts:67:7 should match shopping section visual snapshot" type="FAILURE">
+<![CDATA[  [firefox] › visual.spec.ts:67:7 › CleanNest - Visual Regression Tests › should match shopping section visual snapshot 
+
+    Error: Timed out 5000ms waiting for expect(page).toHaveScreenshot(expected)
+
+      Failed to take two consecutive stable screenshots.
+
+      Snapshot: shopping-section.png
+
+    Call log:
+      - Expect "toHaveScreenshot(shopping-section.png)" with timeout 5000ms
+        - generating new stable screenshot expectation
+      - taking page screenshot
+        - disabled all CSS animations
+      - waiting for fonts to load...
+      - fonts loaded
+      - waiting 100ms before taking screenshot
+      - taking page screenshot
+        - disabled all CSS animations
+      - waiting for fonts to load...
+      - fonts loaded
+      - 35 pixels (ratio 0.01 of all image pixels) are different.
+      - waiting 250ms before taking screenshot
+      - taking page screenshot
+        - disabled all CSS animations
+      - waiting for fonts to load...
+      - fonts loaded
+      - 35 pixels (ratio 0.01 of all image pixels) are different.
+      - waiting 500ms before taking screenshot
+      2 × taking page screenshot
+          - disabled all CSS animations
+        - waiting for fonts to load...
+        - fonts loaded
+        - 35 pixels (ratio 0.01 of all image pixels) are different.
+        - waiting 1000ms before taking screenshot
+      - Timeout 5000ms exceeded.
+
+
+      77 |     }
+      78 |     
+    > 79 |     await expect(page).toHaveScreenshot('shopping-section.png', {
+         |                        ^
+      80 |       fullPage: true,
+      81 |       animations: 'disabled'
+      82 |     });
+        at /Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts:79:24
+
+    attachment #1: shopping-section (image/png) ────────────────────────────────────────────────────
+    Received: ../test-results/visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/shopping-section-actual.png
+    Previous: ../test-results/visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/shopping-section-previous.png
+    Diff:     ../test-results/visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/shopping-section-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/shopping-section-previous.png]]
+
+[[ATTACHMENT|visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/shopping-section-actual.png]]
+
+[[ATTACHMENT|visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/shopping-section-diff.png]]
+
+[[ATTACHMENT|visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/video.webm]]
+
+[[ATTACHMENT|visual-CleanNest---Visual--27113-ing-section-visual-snapshot-firefox/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should handle dark mode if available" classname="visual.spec.ts" time="3.785">
+<system-out>
+<![CDATA[ℹ️  No dark mode toggle found
+]]>
+</system-out>
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should capture component states" classname="visual.spec.ts" time="14.518">
+</testcase>
+</testsuite>
+<testsuite name="visual.spec.ts" timestamp="2025-07-22T17:52:12.227Z" hostname="webkit" tests="7" failures="0" skipped="0" time="49.943" errors="0">
+<testcase name="CleanNest - Visual Regression Tests › should match homepage visual snapshot" classname="visual.spec.ts" time="11.647">
+<system-out>
+<![CDATA[/Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/homepage-full-webkit-darwin.png is re-generated, writing actual.
+]]>
+</system-out>
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should match mobile homepage visual snapshot" classname="visual.spec.ts" time="3.989">
+<system-out>
+<![CDATA[/Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/homepage-mobile-webkit-darwin.png is re-generated, writing actual.
+]]>
+</system-out>
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should match tablet view visual snapshot" classname="visual.spec.ts" time="6.782">
+<system-out>
+<![CDATA[/Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/homepage-tablet-webkit-darwin.png is re-generated, writing actual.
+]]>
+</system-out>
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should match tasks section visual snapshot" classname="visual.spec.ts" time="5.575">
+<system-out>
+<![CDATA[A snapshot doesn't exist at /Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/tasks-section-webkit-darwin.png, writing actual.
+
+[[ATTACHMENT|../tests/visual.spec.ts-snapshots/tasks-section-webkit-darwin.png]]
+
+[[ATTACHMENT|visual-CleanNest---Visual--e8f6e-sks-section-visual-snapshot-webkit/tasks-section-actual.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should match shopping section visual snapshot" classname="visual.spec.ts" time="6.184">
+<system-out>
+<![CDATA[A snapshot doesn't exist at /Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/shopping-section-webkit-darwin.png, writing actual.
+
+[[ATTACHMENT|../tests/visual.spec.ts-snapshots/shopping-section-webkit-darwin.png]]
+
+[[ATTACHMENT|visual-CleanNest---Visual--27113-ing-section-visual-snapshot-webkit/shopping-section-actual.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should handle dark mode if available" classname="visual.spec.ts" time="3.784">
+<system-out>
+<![CDATA[ℹ️  No dark mode toggle found
+]]>
+</system-out>
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should capture component states" classname="visual.spec.ts" time="11.982">
+</testcase>
+</testsuite>
+<testsuite name="visual.spec.ts" timestamp="2025-07-22T17:52:12.227Z" hostname="Mobile Chrome" tests="7" failures="0" skipped="0" time="24.775" errors="0">
+<testcase name="CleanNest - Visual Regression Tests › should match homepage visual snapshot" classname="visual.spec.ts" time="4.037">
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should match mobile homepage visual snapshot" classname="visual.spec.ts" time="4.013">
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should match tablet view visual snapshot" classname="visual.spec.ts" time="4.631">
+<system-out>
+<![CDATA[/Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/homepage-tablet-Mobile-Chrome-darwin.png is re-generated, writing actual.
+]]>
+</system-out>
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should match tasks section visual snapshot" classname="visual.spec.ts" time="2.145">
+<system-out>
+<![CDATA[A snapshot doesn't exist at /Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/tasks-section-Mobile-Chrome-darwin.png, writing actual.
+
+[[ATTACHMENT|../tests/visual.spec.ts-snapshots/tasks-section-Mobile-Chrome-darwin.png]]
+
+[[ATTACHMENT|visual-CleanNest---Visual--e8f6e-sks-section-visual-snapshot-Mobile-Chrome/tasks-section-actual.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should match shopping section visual snapshot" classname="visual.spec.ts" time="4.702">
+<system-out>
+<![CDATA[A snapshot doesn't exist at /Users/cassiamelvin/Downloads/cleaning-nest/tests/visual.spec.ts-snapshots/shopping-section-Mobile-Chrome-darwin.png, writing actual.
+
+[[ATTACHMENT|../tests/visual.spec.ts-snapshots/shopping-section-Mobile-Chrome-darwin.png]]
+
+[[ATTACHMENT|visual-CleanNest---Visual--27113-ing-section-visual-snapshot-Mobile-Chrome/shopping-section-actual.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should handle dark mode if available" classname="visual.spec.ts" time="2.169">
+<system-out>
+<![CDATA[ℹ️  No dark mode toggle found
+]]>
+</system-out>
+</testcase>
+<testcase name="CleanNest - Visual Regression Tests › should capture component states" classname="visual.spec.ts" time="3.078">
+</testcase>
+</testsuite>
+</testsuites>
